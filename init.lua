@@ -17,12 +17,14 @@ vim.call('plug#begin')
 Plug('catppuccin/nvim', { ['as'] = 'catppuccin' })
 Plug('nvim-lualine/lualine.nvim') --statusline
 Plug('nvim-tree/nvim-web-devicons') --statusline requirements 
--- FIXME Plug('folke/which-key.nvim')  --mappings popup
 Plug('nvim-tree/nvim-tree.lua') --file explorer
 Plug('nvim-treesitter/nvim-treesitter') --improved syntax
 Plug('norcalli/nvim-colorizer.lua')
 Plug('MeanderingProgrammer/render-markdown.nvim') --render md inline
 Plug('romgrk/barbar.nvim') --tab-line
+Plug('skywind3000/vim-quickui') -- topline menu
+Plug('folke/which-key.nvim')  --mappings popup
+Plug('emmanueltouzery/decisive.nvim') --view csv files
 
 vim.call('plug#end')
 
@@ -34,7 +36,8 @@ require("plugins.numbertoggle")
 require("plugins.lualine")
 require("plugins.colorizer")
 require("plugins.render-markdown")
--- require("plugins.which-key")
+require("plugins.which-key")
+require("plugins.vim-quickui")
 
 vim.defer_fn(function() 
 		--defer non-essential configs,
@@ -47,21 +50,3 @@ end, 100)
 
 vim.cmd "silent! colorscheme catppuccin"
 
--- Меняем кодировку нажатием F8
-
--- Создаем меню для выбора кодировок
-local encodings_menu = {
-    ["Encoding.cp1251"]   = ":edit ++enc=cp1251<CR>",
-    ["Encoding.koi8-r"]   = ":edit ++enc=koi8-r<CR>",
-    ["Encoding.cp866"]    = ":edit ++enc=ibm866<CR>",
-    ["Encoding.utf-8"]    = ":edit ++enc=utf-8<CR>",
-    ["Encoding.ucs-2le"]  = ":edit ++enc=ucs-2le<CR>"
-}
-
-for name, cmd in pairs(encodings_menu) do
-    vim.cmd("menu "..name.." "..cmd)
-end
-
--- Включаем отображение подсказок команд
-vim.o.wildmenu = true
---vim.o.wildchar = "<Tab>"

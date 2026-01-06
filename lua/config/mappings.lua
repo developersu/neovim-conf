@@ -9,8 +9,9 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 map("n", "<leader>t", ":NvimTreeToggle<CR>") --open file explorer
-map("n", "<leader>r", ":NvimTreeToggle<CR>") --open file explorer
-map("n", "<leader>W", ":set wrap!<CR>") --toggle wrap
+map("n", "<leader>w", ":set wrap!<CR>") --toggle wrap
+
+map("n", "<leader>m", ":call quickui#menu#open()<CR>") --open menu
 
 -- Tabs
 map("n", "<leader>l", ":bnext<CR>")
@@ -32,9 +33,12 @@ map("n", "<leader>9", "<Cmd>BufferGoto 9<CR>")
 map("n", "<leader>0", "<Cmd>BufferLast<CR>")
 
 -- decisive csv
--- map("n", "<leader>csa", ":lua require("decisive").align_csv({})<cr>")
--- map("n", "<leader>csA", ":lua require("decisive").align_csv_clear({})<cr>")
--- map("n", "[c", ":lua require("decisive").align_csv_prev_col()<cr>")
--- map("n", "]c", ":lua require("decisive").align_csv_next_col()<cr>")
+map("n", "<leader>csa", ":lua require('decisive').align_csv({})<CR>")
+map("n", "<leader>csA", ":lua require('decisive').align_csv_clear({})<CR>")
+map("n", "[c", ":lua require('decisive').align_csv_prev_col()<CR>")
+map("n", "]c", ":lua require('decisive').align_csv_next_col()<CR>")
 
-map("n", "<leader>e", ":emenu Encoding.<C-Z>") --toggle menu with encodings
+-- JSON
+map("n", "<leader>cja", ":%!jq '.'<CR>")
+map("n", "<leader>cjj", ":set filetype=json<CR>")
+
