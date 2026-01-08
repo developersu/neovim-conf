@@ -8,3 +8,7 @@ vim.fn.call('quickui#menu#install', {'&Encoding', {
   	{ 'utf-8',   'edit ++enc=utf-8' },   
   	{ 'ibm866',  'edit ++enc=ibm866'  },   
 }})
+
+vim.fn.call('quickui#menu#install', {'&Scrolling', {
+  	{ 'Sync srolling',  'windo set scrollbind!'  },   
+}})
