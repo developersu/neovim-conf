@@ -25,7 +25,7 @@ vim.fn.call('quickui#menu#install', {'&Encoding', {
   	{ 'ibm866',  'edit ++enc=ibm866'  },   
 }})
 
-vim.fn.call('quickui#menu#install', {'&Search…', {
+vim.fn.call('quickui#menu#install', {'&Search+Replace…', {
   	{ '&Remove blank lines', 'g/^\\s*$/d' },   
   	{ 'Remove all &containing', 'call ReplaceContaining()' },   
   	{ 'Remove all &not containing', 'call ReplaceNotContaining()' },   

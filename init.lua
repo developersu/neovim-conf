@@ -29,6 +29,7 @@ Plug('goolord/alpha-nvim') --pretty startup
 Plug('nhattVim/alpha-ascii.nvim')
 Plug('mfussenegger/nvim-lint') --async linter
 Plug('fidian/hexmode') -- better hex-editing
+Plug('lewis6991/gitsigns.nvim') --git
 
 vim.call('plug#end')
 
@@ -45,6 +46,7 @@ require("plugins.alpha")
 require("plugins.alpha-ascii")
 require("plugins.hexmode")
 require("plugins.nvim-lint")
+require("plugins.gitsigns")
 
 vim.defer_fn(function() 
 		--defer non-essential configs,
