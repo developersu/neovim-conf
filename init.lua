@@ -27,6 +27,8 @@ Plug('folke/which-key.nvim')  --mappings popup
 Plug('emmanueltouzery/decisive.nvim') --view csv files
 Plug('goolord/alpha-nvim') --pretty startup
 Plug('nhattVim/alpha-ascii.nvim')
+Plug('mfussenegger/nvim-lint') --async linter
+Plug('fidian/hexmode') -- better hex-editing
 
 vim.call('plug#end')
 
@@ -34,7 +36,6 @@ require("config.mappings")
 require("config.options")
 require("config.autocmd")
 
-require("plugins.numbertoggle")
 require("plugins.lualine")
 require("plugins.colorizer")
 require("plugins.render-markdown")
@@ -42,6 +43,8 @@ require("plugins.which-key")
 require("plugins.vim-quickui")
 require("plugins.alpha")
 require("plugins.alpha-ascii")
+require("plugins.hexmode")
+require("plugins.nvim-lint")
 
 vim.defer_fn(function() 
 		--defer non-essential configs,
@@ -53,3 +56,4 @@ require("plugins.barbar")
 end, 100)
 
 vim.cmd "silent! colorscheme catppuccin"
+

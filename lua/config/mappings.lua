@@ -2,7 +2,6 @@ local function map(m, k, v)
 	vim.keymap.set(m, k, v, { noremap = true, silent = true })
 end
 
-
 -- set leader (key that has to be pressed beforehand mapped one)
 map("", "<Space>", "<Nop>")
 vim.g.mapleader = " "
@@ -42,3 +41,5 @@ map("n", "]c", ":lua require('decisive').align_csv_next_col()<CR>")
 map("n", "<leader>cja", ":%!jq '.'<CR>")
 map("n", "<leader>cjj", ":set filetype=json<CR>")
 
+map("n", "<leader>s", ":%s///g<Left><Left><Left>") --replace all
+map("n", "<leader>u", ':silent !xdg-open "<cWORD>" <CR>') --open a url under cursor
