@@ -43,3 +43,9 @@ map("n", "<leader>cjj", ":set filetype=json<CR>")
 
 map("n", "<leader>s", ":%s///g<Left><Left><Left>") --replace all
 map("n", "<leader>u", ':silent !xdg-open "<cWORD>" <CR>') --open a url under cursor
+
+-- gitsigns
+map("n", "<leader>gb", ":Gitsigns blame_line<CR>")
+map("n", "<leader>ghh", ":Gitsigns preview_hunk<CR>")
+map("n", "<leader>ghn", ":Gitsigns nav_hunk next<CR>")
+map("n", "<leader>ghN", ":Gitsigns nav_hunk prev<CR>")

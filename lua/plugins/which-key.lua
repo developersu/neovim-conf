@@ -33,6 +33,11 @@ wk.add({
 { "<leader>s", desc = "%s/…//g" },
 { "<leader>u", desc = "open url" },
 
+{ "<leader>g", desc = "git" },
+{ "<leader>gb", desc = "blame current" },
+{ "<leader>ghh", desc = "preview hunk inline" },
+{ "<leader>ghn", desc = "hunk next" },
+{ "<leader>ghN", desc = "hunk prev" },
 --{ "<leader>d", desc = "duplicate file" },
 --{ "<leader>p", desc = "toggle theme" },
 --{ "<leader>z", desc = "floating terminal" },
