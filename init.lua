@@ -57,5 +57,4 @@ require("plugins.treesitter")
 require("plugins.barbar")
 end, 100)
 
-vim.cmd "silent! colorscheme catppuccin-frappe"
-
+vim.cmd "silent! colorscheme catppuccin"

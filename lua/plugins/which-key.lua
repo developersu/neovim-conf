@@ -29,7 +29,7 @@ wk.add({
 { "<leader>cja", desc = "format in jq" },
 { "<leader>cjj", desc = "set JSON filetype" },
 
-{ "<leader>t", desc = "view files" },
+{ "<leader>t", desc = "explore fs" },
 { "<leader>s", desc = "%s/…//g" },
 { "<leader>u", desc = "open url" },
 
