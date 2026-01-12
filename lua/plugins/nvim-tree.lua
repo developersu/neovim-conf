@@ -1,8 +1,8 @@
 require("nvim-tree").setup({
 renderer = {
---note on icons:
---in some terminals, some patched fonts cut off glyphs if not given extra space
---either add extra space, disable icons, or change font
+    --note on icons:
+    --in some terminals, some patched fonts cut off glyphs if not given extra space
+    --either add extra space, disable icons, or change font
 	icons = {
 		show = {
 		file = true,
@@ -12,18 +12,22 @@ renderer = {
 		},
 	},
 },
-	view = {
-		width = 25,
-		side = 'left',
-	},
-	sync_root_with_cwd = true, --fix to open cwd with tree
-	respect_buf_cwd = true,
-	update_cwd = true,
-	update_focused_file = {
+view = {
+    width = 25,
+    side = 'left',
+},
+sync_root_with_cwd = true, --fix to open cwd with tree
+respect_buf_cwd = true,
+update_cwd = true,
+update_focused_file = {
+    enable = true,
+    update_cwd = true,
+    update_root = true,
+},
+filters = {
 		enable = true,
-		update_cwd = true,
-		update_root = true,
-	},
+		dotfiles = true, -- enable showing dotfiles via 'H'
+},
 })
 
 vim.g.nvim_tree_respect_buf_cwd = 1
