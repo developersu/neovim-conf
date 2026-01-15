@@ -14,6 +14,7 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin')
 -- Install these via :PlugInstall
+Plug('Wansmer/langmapper.nvim') --русский
 Plug('catppuccin/nvim', { ['as'] = 'catppuccin' })
 Plug('nvim-lualine/lualine.nvim') --statusline
 Plug('nvim-tree/nvim-web-devicons') --statusline requirements 
@@ -32,6 +33,8 @@ Plug('fidian/hexmode') -- better hex-editing
 Plug('lewis6991/gitsigns.nvim') --git
 
 vim.call('plug#end')
+
+require("plugins.langmapper")
 
 require("config.mappings")
 require("config.options")
@@ -58,3 +61,5 @@ require("plugins.barbar")
 end, 100)
 
 vim.cmd "silent! colorscheme catppuccin"
+
+require('langmapper').automapping({ global = true, buffer = true })
