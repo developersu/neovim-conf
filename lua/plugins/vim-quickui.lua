@@ -79,12 +79,13 @@ vim.cmd [[
 
 
 
--- Set file encodign in menu
+-- Editor menu
 vim.fn.call('quickui#menu#install', {'&Editor', {
   	{ '&Hex mode',  'Hexmode'  },   
   	{ '&Encoding',  'call SetEncoding()'  },   
 	{ '--', '' },
   	{ '&Sync srolling',  'windo set scrollbind!'  },   
+  	{ 'S&pell check',  'set spell!' },   
 }})
 
 vim.fn.call('quickui#menu#install', {'&Search-Replace', {
