@@ -38,6 +38,7 @@ wk.add({
 { "<leader>ghh", desc = "preview hunk inline" },
 { "<leader>ghn", desc = "hunk next" },
 { "<leader>ghN", desc = "hunk prev" },
+{ "<leader>d", desc = "diff" },
 
 --{ "<leader>z", desc = "floating terminal" },
 --{ "<leader>f", desc = "fzf" },

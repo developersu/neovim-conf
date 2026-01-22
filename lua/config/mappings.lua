@@ -49,3 +49,13 @@ map("n", "<leader>gb", ":Gitsigns blame_line<CR>")
 map("n", "<leader>ghh", ":Gitsigns preview_hunk<CR>")
 map("n", "<leader>ghn", ":Gitsigns nav_hunk next<CR>")
 map("n", "<leader>ghN", ":Gitsigns nav_hunk prev<CR>")
+
+
+function diffToggle()
+  if vim.wo.diff then
+    vim.cmd(':windo diffoff')
+  else
+    vim.cmd(':windo diffthis')
+  end
+end
+map("n", "<leader>d", ":lua diffToggle()<CR>") -- diff opened in split buffers
