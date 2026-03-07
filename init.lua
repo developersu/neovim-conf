@@ -31,6 +31,7 @@ Plug('nhattVim/alpha-ascii.nvim')
 Plug('mfussenegger/nvim-lint') --async linter
 Plug('fidian/hexmode') -- better hex-editing
 Plug('lewis6991/gitsigns.nvim') --git
+--Plug('rest-nvim/rest.nvim')
 
 vim.call('plug#end')
 
@@ -61,5 +62,5 @@ require("plugins.barbar")
 end, 100)
 
 vim.cmd "silent! colorscheme catppuccin"
-
+vim.opt.spelllang = "ru,en"
 require('langmapper').automapping({ global = true, buffer = true })

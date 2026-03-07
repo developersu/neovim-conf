@@ -86,6 +86,7 @@ vim.fn.call('quickui#menu#install', {'&Editor', {
 	{ '--', '' },
   	{ '&Sync srolling',  'windo set scrollbind!'  },   
   	{ 'S&pell check',  'set spell!' },   
+  	{ '&No spell check',  'set nospell' },   
 }})
 
 vim.fn.call('quickui#menu#install', {'&Search-Replace', {
