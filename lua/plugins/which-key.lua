@@ -27,7 +27,9 @@ wk.add({
 { "<leader>[c", desc = "prev csv column" },
 { "<leader>]c", desc = "next csv column" },
 { "<leader>cja", desc = "format in jq" },
+{ "<leader>cjA", desc = "format in jq sorted" },
 { "<leader>cjj", desc = "set JSON filetype" },
+{ "<leader>ch", desc = "format HTML with indents" },
 
 { "<leader>t", desc = "explore fs" },
 { "<leader>s", desc = "%s/…//g" },

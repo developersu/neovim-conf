@@ -39,6 +39,7 @@ map("n", "]c", ":lua require('decisive').align_csv_next_col()<CR>")
 
 -- JSON
 map("n", "<leader>cja", ":%!jq '.'<CR>")
+map("n", "<leader>cjA", ":%!jq -S '.'<CR>")
 map("n", "<leader>cjj", ":set filetype=json<CR>")
 
 map("n", "<leader>s", ":%s///g<Left><Left><Left>") --replace all
@@ -59,3 +60,11 @@ function diffToggle()
   end
 end
 map("n", "<leader>d", ":lua diffToggle()<CR>") -- diff opened in split buffers
+
+function formatHtml()
+  vim.cmd(':%s/<[^>]*>/\r&\r/g')
+  vim.cmd(':g/^\\s*$/d')
+  vim.cmd(':set filetype=html')
+  vim.cmd('normal! gg=G')
+end
+map("n", "<leader>ch", ":lua formatHtml()<CR>")

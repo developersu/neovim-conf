@@ -14,7 +14,8 @@ local options = {
 	ttyfast = true, --faster scrolling
 	smoothscroll = true,
 	title = true, --automatic window titlebar
-	
+    shiftwidth = 2,
+	expandtab = true,
 	number = true,
 --	relativenumber = false,
 	numberwidth = 4,
