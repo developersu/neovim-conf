@@ -30,6 +30,7 @@ map("n", "<leader>7", "<Cmd>BufferGoto 7<CR>")
 map("n", "<leader>8", "<Cmd>BufferGoto 8<CR>")
 map("n", "<leader>9", "<Cmd>BufferGoto 9<CR>")
 map("n", "<leader>0", "<Cmd>BufferLast<CR>")
+map("n", "<leader>n", "<Cmd>:enew<CR>")
 
 -- decisive csv
 map("n", "<leader>csa", ":lua require('decisive').align_csv({})<CR>")

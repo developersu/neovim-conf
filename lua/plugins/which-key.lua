@@ -10,6 +10,7 @@ wk.add({
 { "<leader>7", desc = "tab 7" },
 { "<leader>8", desc = "tab 8" },
 { "<leader>9", desc = "tab 9" },
+{ "<leader>n", desc = "new tab" },
 { "<leader>q", desc = "tab close" },
 { "<leader>Q", desc = "tab close!" },
 { "<leader>h", desc = "tab prev" },
